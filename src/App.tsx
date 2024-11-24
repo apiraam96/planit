@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./App.css";
+import SearchBar from "./components/SearchBar";
 
 function App() {
   const [message, setMessage] = useState("loading...");
@@ -14,7 +14,12 @@ function App() {
     fetchLogin();
   }, []);
 
-  return <div>{message}</div>;
+  return (
+    <>
+      <SearchBar />
+      <div className="text-red-500">{message}</div>
+    </>
+  );
 }
 
 export default App;
