@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import SearchBar from "./components/SearchBar";
+import NavBar from "./components/NavBar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
   const [message, setMessage] = useState("loading...");
@@ -16,8 +19,12 @@ function App() {
 
   return (
     <>
-      <SearchBar />
-      <div className="text-red-500">{message}</div>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
