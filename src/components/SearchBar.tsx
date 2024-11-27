@@ -54,7 +54,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-white p-4">
+    <div className="flex flex-col items-center bg-white p-4">
       <form
         onSubmit={(e) => e.preventDefault()}
         className="w-full max-w-2xl mb-8"
